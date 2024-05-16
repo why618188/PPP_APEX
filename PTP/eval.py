@@ -192,6 +192,7 @@ def train(model, batch_size, data, tokenizer, output_dir, val_set_size):
     return 0
 
 
+
 if __name__ == '__main__':
     # hyperparameters
     CUTOFF_LEN = 2048

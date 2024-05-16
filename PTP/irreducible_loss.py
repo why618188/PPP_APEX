@@ -103,6 +103,7 @@ def calculate_irreducible_loss(model, data):
     np.save("PTP/irrloss6.npy", loss_arr)
 
 
+
 if __name__ == '__main__':
 
     # hyperparameters
