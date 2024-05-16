@@ -17,8 +17,8 @@ from peft import (
     set_peft_model_state_dict
 )
 
-from core.training import TrainingDynamicsLogger
-from inference import batch_prob_infer_fn, extract_features
+from D2P.core.training import TrainingDynamicsLogger
+from D2P.inference import batch_prob_infer_fn, extract_features
 
 
 def tokenize(prompt, type):
@@ -220,8 +220,8 @@ if __name__ == '__main__':
     START_EPOCH = 5    # manually modify if resume
 
     # paths
-    DATA_PATH = "/home/hywang/projects/d2pruning/train.json"
-    TEST_PATH = "/home/hywang/projects/d2pruning/test.json"
+    DATA_PATH = "/train.json"
+    TEST_PATH = "/test.json"
     model_path = '/D2P/Warm_up_model'
     OUTPUT_DIR = "/D2P/D2P_Round1_Model"
     adapter_path = "/D2P/D2P_Round1_Model/epoch_3_model"  # manually modify if resume

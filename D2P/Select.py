@@ -2,7 +2,7 @@ import pickle
 import os
 import json
 import numpy as np
-from core.data.Coreset import CoresetSelection
+from D2P.core.data.Coreset import CoresetSelection
 
 output = []
 for epoch in range(1, 6):
@@ -24,7 +24,7 @@ coreset_index = CoresetSelection.stratified_sampling(variance, coreset_num=1000,
 np.save("/D2P/Coreset_Index.npy", coreset_index)
 
 
-with open('/home/hywang/projects/d2pruning/train.json', 'r') as f:
+with open('/train.json', 'r') as f:
     train_data = json.load(f)
 
 selected_data = [train_data[i] for i in coreset_index]
